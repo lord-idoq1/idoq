@@ -1,0 +1,858 @@
+<!-- Udh Izin -->
+<!--OjanGanz -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ojan - Api</title>
+    <link rel="icon" href="https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" type="image/x-icon">
+<style type="text/css">
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body{
+  min-height: 10vh;
+  background-color: #000;
+  background-size: cover;
+  background-position: center;
+}
+
+.side-bar{
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(15px);
+  width: 290px;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: -100%;
+  overflow-y: auto;
+  transition: 0.6s ease;
+  transition-property: left;
+}
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #888;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+.side-bar .profile img{
+  margin: 20px 0;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+
+.side-bar .profile p{
+  color: #fff;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.side-bar.active{
+  left: 0;
+}
+
+.side-bar .menu{
+  width: 100%;
+  margin-top: 40px;
+}
+
+
+.side-bar .menu .item{
+  position: relative;
+  cursor: pointer;
+}
+
+.side-bar .menu .item a{
+  color: #fff;
+  font-size: 16px;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 30px;
+}
+
+.side-bar .menu .item a:hover{
+  background: #8621F8;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item i{
+  margin-right: 15px;
+}
+
+.side-bar .menu .item a .dropdown{
+  position: absolute;
+  right: 0;
+  margin: 10px;
+  transition: 0.3s ease;
+}
+
+.side-bar .menu .item .sub-menu{
+  background: rgba(255, 255, 255, 0.1);
+  display: none;
+}
+
+.side-bar .menu .item .sub-menu a{
+   padding-left: 80px;
+}
+
+.rotate{
+  transform: rotate(90deg);
+}
+
+.close-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  right: 0;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.menu-btn{
+  position: absolute;
+  color: #fff;
+  font-size: 20px;
+  margin: 25px;
+  cursor: pointer;
+}
+
+.main{
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 50px;
+}
+
+.main h1{
+  color:  #fff;
+  font-size: 50px;
+  text-align: center;
+  line-height: 80px;
+}
+
+a:link {
+  color: #fff;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+#box {
+  top: 10px;
+  border-color: #fff;
+  border-style: solid;
+  border-radius: 5px;
+  padding: 3px;
+  margin : 10px;
+  right: 0;
+  position: absolute;
+}
+.box {
+  width: 75px;
+  height: 50px;
+  text-align: center;
+  font-size: 15px;
+  font-family: "Poppins", sans-serif;
+  background-color: #000;
+  border-radius: 5px;
+}
+
+@media (max-width: 900px){
+  .main h1{
+    font-size: 40px;
+    line-height: 60px;
+  }
+}
+</style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" charset="utf-8"></script>
+    
+    <!-- add icon link -->
+  </head>
+  </style>
+  <body id="page-top" onload="visitor()">
+  <body oncontextmenu="return false" onkeydown="return false;" onmousedown="return false;">
+    <div class="menu-btn">
+      <i class="fas fa-bars"></i>
+    </div>
+    <iframe width="0" height="0" allow="autoplay" src="https://k.top4top.io/m_2028iud8a1.mp3" frameborder="0" allowfullscreen></iframe> 
+    
+    <body>
+    <div class="side-bar">
+      <div class="close-btn">
+        <i class="fas fa-times"></i>
+      </div>
+      <center class="profile">
+        <img src="https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" alt="">
+        <p>OjanSenpai1337</p>
+        <h>
+        <p style="color:white">Visitor :</p>
+        <p style="color:white"><span id="visitor"></span>
+      </center>
+      <div class="menu">
+        <div class="item"><a href="#"><i class="fas fa-desktop"></i>Dashboard</a></div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-mosque"></i>muslim API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/muslim/tahlil" class="sub-item">Doa Tahlil</a>
+            <a href="/api/muslim/wirid" class="sub-item">Doa Wirid</a>
+            <a href="/api/muslim/asmaulhusna" class="sub-item">Asmaul Husna</a>
+            <a href="/api/muslim/doaharian" class="sub-item">Doa Harian</a>
+            <a href="/api/muslim/ayatkursi" class="sub-item">Ayat Kursi</a>
+            <a href="/api/muslim/kisahnabi?nabi=muhammad" class="sub-item">Kisah Nabi</a>
+            <a href="/api/muslim/niatshalat" class="sub-item">Niat Shalat</a>
+            <a href="/api/muslim/bacaanshalat" class="sub-item">Bacaan Shalat</a>
+            <a href="/api/muslim/jadwalshalat?kota=jakarta" class="sub-item">Jadwal Shalat</a>
+            <a href="/api/muslim/alquran?surah=1&ayat=2" class="sub-item">Alquran</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-text-height"></i>Photooxy API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+           <a href="/api/photooxy/shadow?text=ojansenpai" class="sub-item">Shadow Text Effect</a>
+           
+           
+           <a href="/api/photooxy/romantic?text=ojansenpai" class="sub-item">Romantic Text Effect</a>
+           
+           
+           <a href="/api/photooxy/smoke?text=ojansenpai" class="sub-item">Smoke text Effect</a>
+           
+           
+           <a href="/api/photooxy/burn-paper?text=ojansenpai" class="sub-item">Burn-paper Text Effect</a>
+           
+           
+           <a href="/api/photooxy/naruto?text=ojansenpai" class="sub-item">Naruto Text Effect</a>
+           
+           
+           <a href="/api/photooxy/romantic?text=ojansenpai" class="sub-item">Romantic Text Effect</a>
+           
+           
+           <a href="/api/photooxy/love-message?text=ojansenpai" class="sub-item">Love-Message Text Effect</a>
+           
+           
+           <a href="/api/photooxy/message-under-grass?text=ojansenpai" class="sub-item">Message Under Grass</a>
+           
+           
+           <a href="/api/photooxy/glitch?text=ojansenpai?text2=Rest APIs" class="sub-item">Glitch Text Effect</a>
+           
+           
+           <a href="/api/photooxy/double-heart?text=ojansenpai" class="sub-item">Double Heart</a>
+           
+           
+           <a href="/api/photooxy/coffe-cup?text=ojansenpai" class="sub-item">Coffe-cup Text Effect</a>
+           
+           
+           <a href="/api/photooxy/love-text?text=ojansenpai" class="sub-item">Love-Text Effect</a>
+           
+           
+           <a href="/api/photooxy/butterfly?text=ojansenpai" class="sub-item">Butterfly Text Effect</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-laptop-house"></i>SocialMedia API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/download/fb?url=https://www.facebook.com/watch/?v=1393572814172251" class="sub-item">Facebook Downloader</a>         
+            <a href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr" class="sub-item">Instagram Downloader</a>
+            
+            
+            <a href="/api/download/ytmp4?url=https://youtu.be/Nq5rzeJ5Ab4" class="sub-item">Youtube Video Downloader</a>
+            
+            
+            <a href="/api/download/ytmp3?url=https://youtu.be/Nq5rzeJ5Ab4" class="sub-item">Youtube Audio Downloader</a>
+            
+            
+            <a href="/api/yt/playmp4?query=naruto" class="sub-item">Youtube Play Video</a>
+            
+            
+            <a href="/api/yt/playmp3?query=naruto" class="sub-item">Youtube Play Audio</a>
+            
+            
+            <a href="/api/yt/search?query=naruto" class="sub-item">Youtube Search</a>
+            
+            
+            <a href="/api/stalk/github?username=fznxsec404" class="sub-item">Github Stalk</a>
+            
+            
+            <a href="/api/stalk/tiktok?username=dj.ojann" class="sub-item">Tiktok Stalk</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-search"></i>Search API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+          <a href="/api/search/image?query=naruto" class="sub-item">Google Image Search</a>
+          
+          
+          <a href="/api/search/pinterest?query=naruto" class="sub-item">Pinterest Image Search</a>
+          
+          
+          <a href="/api/search/gsmarena?query=poco x3" class="sub-item">GSMArena Search</a>
+          
+          
+          <a href="/api/search/shopee?query=air jordan" class="sub-item">Shopee Search</a>
+          
+          
+          <a href="/api/search/gplaystore?query=freefire&num=100" class="sub-item">Playstore Search</a>
+          
+          
+          <a href="/api/search/appstore?query=freefire&num=100&page=1" class="sub-item">Appstore Search</a>
+          </div>
+        </div>
+        <div class="item">
+        <a class="sub-btn"><i class="fas fa-music"></i>Music Api<i class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+        <a href="/api/music/joox?query=monolog pamungkas" class="sub-item">Joox Download</a>
+        
+        
+        <a href="/api/music/liriklagu?query=sayang" class="sub-item">Search Lirik Lagu</a>
+        
+        
+        <a href="/api/music/chordlagu?lagu=sayang" class="sub-item">Search Chord Lagu</a>
+        </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-pencil-alt"></i>Maker API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/maker/nulis?text=Awokwokwok Mager yaa:v" class="sub-item">Nulis Buku</a>
+            
+            
+            <a href="/api/styletext?text=ff.ojan.wibuTzy" class="sub-item">StyleText</a>
+            
+            
+            <a href="/api/maker/attp?text=ojansenpai" class="sub-item">Animation Text To Picture</a>
+            
+            
+            <a href="/api/maker/ttp?text=ojansenpai" class="sub-item">Text To Picture</a>
+            
+            
+            <a href="/api/maker/ttp2?text=ojansenpai" class="sub-item">Text To Picture 2</a>
+            
+            
+            <a href="/api/maker/emoji2png?text=😎" clas="sub-item">Emoji To Png</a>
+          </div>
+        </div>
+        <div class="item">
+        <a class="sub-btn"><i class="fas fa-pencil-alt"></i>Textpro API<i class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+        <a href="/api/textpro/logo-wolf?text=ojan&text2=senpai" class="sub-item">Logo Wolf</a>
+        
+        
+        <a href="/api/textpro/graffiti?text=ojan" class="sub-item">Text Grafiti</a>
+        
+        
+        <a href="/api/textpro/graffiti1?text=ojan&text2=senpai" class="sub-item">Text Grafiti1</a>
+        
+        
+        <a href="/api/textpro/blackpink?text=ojan" class="sub-item">Text Blackpink</a>
+        
+        
+        <a href="/api/textpro/3dstone?text=ojan" class="sub-item">Text 3D Stone</a>
+        
+        
+        
+        <a href="/api/textpro/glitchtext?text=ojan" class="sub-iten">Glitchtext</a>
+                <a href="/api/textpro/pornhub?text=ojan&text2=senpai" class="sub-iten">Pornhub Text</a>
+                  <a href="/api/textpro/textpantai?text=ojansenpai" class="sub-iten">Text Pantai</a>
+                          <a href="/api/textpro/textpantai?text=ojansenpai" class="sub-iten">Text Pantai</a>
+                                  <a href="/api/textpro/textpantai2?text=ojansenpai" class="sub-iten">Text Pantai 2</a>
+                    <a href="/api/textpro/marvel?text=ojansenpai&text2=ganz" class="sub-iten">Marvel Text</a>
+                    <a href="/api/textpro/magmatext?text=ojansenpai" class="sub-iten">Magma Text</a>
+                    <a href="/api/textpro/watercolor?text=ojansenpai" class="sub-iten">Water Color Text</a>
+                    <a href="/api/textpro/jokerlogo?text=ojansenpai" class="sub-iten">Joker Logo</a>
+                    <a href="/api/textpro/dropwater?text=ojansenpai" class="sub-iten">Drop Water</a>
+                   
+                
+        </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-video"></i>Asupan API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/asupan" class="sub-item">Asupan +62</a>
+            <a href="/api/asupan/bocil" class="sub-item">Asupan Bocil</a>
+            <a href="/api/asupan/santuy" class="sub-item">Asupan Santuy</a>
+            <a href="/api/asupan/ukhty" class="sub-item">Asupan Ukhty</a>
+            <a href="/api/asupan/cecan" class="sub-item">Random Foto Cecan</a>
+            <a href="/api/asupan/geayubi" class="sub-item">Asupan Ghea</a>
+            <a href="/api/asupan/hijab" class="sub-item">Random Foto Hijab</a>
+          </div>
+        </div>
+        <div class="item">
+        <a class="sub-btn"><i class="fas fa-camera"></i>Kartun API<i class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+        <a href="/api/kartun/search?query=spongebob" class="sub-item">Kartun Search</a>
+        
+        
+        <a href="/api/kartun/genre/movie" class="sub-item">Kartun Genre Movie</a>
+        
+        
+        <a href="/api/kartun/genre/military" class="sub-item">Kartun Genre Military</a>
+        
+        
+        <a href="/api/kartun/genre/comedy" class="sub-item">Kartun Genre Comedy</a>
+        
+        
+        <a href="/api/kartun/genre/drama" class="sub-item">Kartun Genre Drama</a>
+        
+        
+        <a href="/api/kartun/genre/action" class="sub-item">Kartun Genre Action</a>
+        
+        
+        <a href="/api/kartun/genre/adventure" class="sub-item">Kartun Genre Adventure</a>
+        
+        
+        <a href="/api/animek/kusonime?query=naruto" class="sub-item">Kusonime</a>
+        
+        
+        <a href="/api/animek/dewabatch?query=naruto" class="sub-item">Dewabatch</a>
+        </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-image"></i>Canvas API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/welcome?name=ojansenpai&mem=50&gcname=OJAN GRUP&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Welcomer</a>
+            
+            
+            <a href="/api/welcome2?name=ojansenpai&mem=50&gcname=OJAN GRUP&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&gcicon=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Welcomer 2</a>
+            
+            
+            <a href="/api/welcome3?name=ojansenpai&mem=50&msg=SELAMAT DATANG DI GRUP OJAN&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg" class="sub-item">Welcomer 3</a>
+            
+            
+            <a href="/api/goodbye?name=ojansenpai&mem=50&gcname=OJAN GRUP&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Goodbye</a>
+            
+            
+            <a href="/api/goodbye2?name=ojansenpai&mem=50&gcname=OJAN GRUP&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&gcicon=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Goodbye 2</a>
+            
+            
+            <a href="/api/goodbye3?name=ojansenpai&mem=50&msg=BYE BYE BABI&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg" class="sub-item">Goodbye 3</a>
+            
+            
+            <a href="/api/promote?name=ojansenpai&mem=50&msg=Selamat Menjadi Admin&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg" class="sub-item">Promote</a>
+            
+            
+            <a href="/api/demote?name=ojansenpai&mem=50&msg=Mampus Didemote&picurl=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg&bgurl=https://cdn.discordapp.com/attachments/819995259261288475/835055559941292032/style.jpg" class="sub-item">Demote</a>
+            
+            
+            <a href="/api/imgedit/gay?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Gay Effect</a>
+            
+            
+            <a href="/api/imgedit/gay2?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Gay Effect 2</a>
+            
+            
+            <a href="/api/imgedit/komunis?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Komunis Effect</a>
+            
+            
+            <a href="/api/imgedit/hitler?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Hitler Effect</a>
+            
+            
+            <a href="/api/imgedit/discordblue?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Discord Effect</a>
+            
+            
+            <a href="/api/imgedit/discordblack?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Discord Effect 2</a>
+            
+            
+            <a href="/api/imgedit/circle?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Circle Effect</a>
+            
+            
+            <a href="/api/imgedit/captcha?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Captcha Effect</a>
+            
+            
+            <a href="/api/imgedit/police?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Police Line Effect</a>
+            
+            
+            <a href="/api/imgedit/continued?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Continued Effect</a>
+            
+            
+            <a href="/api/imgedit/putin?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Putin Effect</a>
+            
+            
+            <a href="/api/imgedit/petimati?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">RIP Effect</a>
+            
+            
+            <a href="/api/imgedit/presentasi?text=anak kntl" class="sub-item">Presentasi Effect</a>
+            
+            
+            <a href="/api/imgedit/penjara?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Jail Effect</a>
+            
+            
+            <a href="/api/imgedit/wasted?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Wasted Effect</a>
+            
+            
+            <a href="/api/imgedit/triger?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Triggered Effect</a>
+            
+            
+            <a href="/api/imgedit/greyscale?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">GreyScale Effect</a>
+            
+            
+            <a href="/api/imgedit/invert?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Invert Effect</a>
+            
+            
+            <a href="/api/imgedit/brightness?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Brightness Effect</a>
+            
+            
+            <a href="/api/imgedit/glass?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Glass Effect</a>
+            
+            
+            <a href="/api/imgedit/sepia?url=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Sepia Effect</a>
+            
+            
+            <a href="/api/imgedit/enhance&img=https://i.ibb.co/zN7qGbZ/IMG-20210620-WA0309.jpg" class="sub-item">Bikin HD gambar</a>
+            
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="far fa-laugh-beam"></i>Fun API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+          <a href="/api/kuis/caklontong" class="sub-item">Cak Lontong</a>
+           
+           
+           <a href="/api/kuis/tebakgambar" class="sub-item">Tebak Gambar</a>
+           
+           
+           <a href="/api/kuis/math" class="sub-item">Soal Matematika</a>
+           
+           
+           <a href="/api/kuis/tebakbendera" class="sub-item">Tebak Bendera</a>
+           
+           
+           <a href="/api/kuis/tebakjenaka" class="sub-item">Tebak Jenaka</a>
+           
+           
+           <a href="/api/kuis/tebakkimia" class="sub-item">Tebak Kimia</a>
+           
+           
+           <a href="/api/kuis/tebakchara" class="sub-item">Tebak Animek</a>
+           
+           
+           <a href="/api/kuis/tebakbendera" class="sub-item">Tebak Bendera</a>
+           
+           
+           <a href="/api/kuis/tebaklirik" class="sub-item">Tebak Lirik Lagu</a>
+           
+           
+           <a href="/api/fun/truth" class="sub-item">Truth</a>
+           
+           
+           <a href="/api/fun/dare" class="sub-item">Dare</a>
+           
+           
+           <a href="/api/fun/cerpen" class="sub-item">Cerpen</a>
+           
+           
+           <a href="/api/fun/pantun" class="sub-item">Pantun</a>
+           
+           
+           <a href="/api/fun/ramaljadian?tanggal=1&bulan=1&tahun=2001" class="sub-item">Ramal Jadian</a>
+           
+           
+           <a href="/api/hilih?kata=aku kan ganteng banget" class="sub-item">Kata Hilih</a>
+           
+           
+           <a href="/api/heleh?kata=aku kan ganteng banget" class="sub-item">Kata Heleh</a>
+           
+           
+           <a href="/api/holoh?kata=aku kan ganteng banget" class="sub-item">Kata Holoh</a>
+           
+           
+           <a href="/api/halah?kata=aku kan ganteng banget" class="sub-item">Kata Halah</a>
+           
+           
+           <a href="/api/huluh?kata=aku kan ganteng banget" class="sub-item">Kata Huluh</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-cat"></i>Nsfw & Sfw API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/nhentaidownloader?kode=177013" class="sub-item">Nhentai Downloader (Zip)</a>
+            
+            
+            <a href="/api/nsfw/ass" class="sub-item">Ass</a>
+            
+            
+            <a href="/api/nsfw/ahegao" class="sub-item">Ahegao</a>
+            
+            
+            <a href="/api/nsfw/bdsm" class="sub-item">Bdsm</a>
+            
+            
+            <a href="/api/nsfw/blowjob" class="sub-item">Blowjob</a>
+            
+            
+            <a href="/api/nsfw/cuckold" class="sub-item">Cuckold</a>
+            
+            
+            <a href="/api/nsfw/cum" class="sub-item">Cum</a>
+            
+            
+            <a href="/api/nsfw/ero" class="sub-item">Ero</a>
+            
+            
+            <a href="/api/nsfw/femdom" class="sub-item">Femdom</a>
+            
+            
+            <a href="/api/nsfw/foot" class="sub-item">Foot</a>
+            
+            
+            <a href="/api/nsfw/gangbang" class="sub-item">Gangbang</a>
+            
+            
+            <a href="/api/nsfw/glasses" class="sub-item">Glasses</a>
+            
+            
+            <a href="/api/nsfw/hentai" class="sub-item">Hentai</a>
+            
+            
+            <a href="/api/nsfw/hentaigif" class="sub-item">Hentaigif</a>
+            
+            
+            <a href="/api/nsfw/jahy" class="sub-item">Jahy</a>
+            
+            
+            <a href="/api/nsfw/masturbation" class="sub-item">Masturbate</a>
+            
+            
+            <a href="/api/nsfw/nsfwNeko" class="sub-item">NsfwNeko</a>
+            
+            
+            <a href="/api/nsfw/orgy" class="sub-item">Orgy</a>
+            
+            
+            <a href="/api/nsfw/panties" class="sub-item">Panties</a>
+            
+            
+            <a href="/api/nsfw/pussy" class="sub-item">Pussy</a>
+            
+            
+            <a href="/api/nsfw/thighs" class="sub-item">Anime Pussy</a>
+            
+            
+            <a href="/api/nsfw/yuri" class="sub-item">Yuri</a>
+            
+            
+            <a href="/api/cersex" class="sub-item">Cerita sex</a>
+            
+            <h6 class="collapse-header" class="sub-item">SFW API</h6>
+            
+            <a href="/api/sfw/waifu" class="sub-item">Waifu</a>
+            
+            
+            <a href="/api/sfw/neko" class="sub-item">Neko</a>
+            
+            
+            <a href="/api/sfw/shinobu" class="sub-item">Shinobu</a>
+            
+            
+            <a href="/api/sfw/megumin" class="sub-item">Megumin</a>
+            
+            
+            <a href="/api/sfw/bully" class="sub-item">Bully</a>
+            
+            
+            <a href="/api/sfw/cuddle" class="sub-item">Cuddle</a>
+            
+            
+            <a href="/api/sfw/cry" class="sub-item">Cry</a>
+            
+            
+            <a href="/api/sfw/kiss" class="sub-item">Kiss</a>
+            
+            
+            <a href="/api/sfw/hug" class="sub-item">Hug</a>
+            
+            
+            <a href="/api/sfw/awoo" class="sub-item">Awoo</a>
+            
+            
+            <a href="/api/sfw/lick" class="sub-item">Lick</a>
+          </div>
+        </div>
+        <div class="item">
+          <a class="sub-btn"><i class="fas fa-random"></i>Random Image API<i class="fas fa-angle-right dropdown"></i></a>
+          <div class="sub-menu">
+            <a href="/api/maker/dadu" class="sub-item">Random DADU</a>
+            
+            
+            <a href="/api/wallpaper/teknologi" class="sub-item">Wallpaper Teknologi</a>
+            
+            
+            <a href="/api/wallpaper/programming" class="sub-item">Wallpaper Programming</a>
+            
+            
+            <a href="/api/wallpaper/cyberspace" class="sub-item">Wallpaper CyberSpace</a>
+            
+            
+            <a href="/api/wallpaper/muslim" class="sub-item">Wallpaper Muslim</a>
+            
+            
+            <a href="/api/wallpaper/mountain" class="sub-item">Wallpaper Mountain View</a>
+          </div>
+        </div>
+        <div class="item">
+        <a class="sub-btn"><i class="fas fa-search"></i>Information Api<i class="fas fa-angle-right dropdown"></i></a>
+        <div class="sub-menu">
+        <a  href="/api/info/gempa" class="sub-item">Info Gempa</a>
+        
+        
+        <a href="/api/info/cuaca?kota=banyuwangi" class="sub-item">Info Cuaca</a>
+        
+        
+        <a href="/api/info/covidindo" class="sub-item">Covid Indo</a>
+        
+        
+        <a href="/api/info/covidworld" class="sub-item">Covid World</a>
+        
+        
+        <a href="/api/info/wikipedia?search=jembatan" class="sub-item">Wikipedia</a>
+        
+        
+        <a href="/api/info/drakorasia?search=tale" class="sub-item">Drakor Asia</a>
+        
+        
+        <a href="/api/info/kbbi?kata=pohon" class="sub-item">KBBI</a>
+        
+        
+        <a href="/api/info/kodepos?kota=jakarta" class="sub-item">Kode Pos</a>
+        </div>
+        </div><br>
+        <div class="item"><a href="https://wa.me/6289666262976"><i class="fab fa-whatsapp"></i>WhatsApp</a></div>
+        <div class="item"><a href="https://instagram.com/fauzan_perfect"><i class="fab fa-instagram"></i>Instagram</a></div>
+        <div class="item"><a href="https://youtube.com/c/FauzanPerfect"><i class="fab fa-youtube"></i>YouTube</a></div>
+        <div class="item"><a href="https://saweria.co/FznXSec404"><i class="fas fa-money-bill-wave"></i>Donate</a></div>
+      </div>
+    </div>
+    <section class="main">
+    <h1>
+    <font color="white"> 
+    <div id="clock"></div> <script type="text/javascript">
+    function showTime() {
+    var a_p = "";
+    var today = new Date();
+    var curr_hour = today.getHours();
+    var curr_minute = today.getMinutes();
+    var curr_second = today.getSeconds();
+    if (curr_hour < 12) {
+    a_p = "AM";
+    } else {
+    a_p = "PM";
+    }
+    if (curr_hour == 0) {
+    curr_hour = 12;
+    }
+    if (curr_hour > 12) {
+    curr_hour = curr_hour - 12;
+    }
+    curr_hour = checkTime(curr_hour);
+    curr_minute = checkTime(curr_minute);
+    curr_second = checkTime(curr_second);
+    document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+    }
+    
+    function checkTime(i) {
+    if (i < 10) {
+    i = "0" + i;
+    }
+    return i;
+    }
+    setInterval(showTime, 500);
+    
+    </script> <script type="text/javascript">
+    
+    var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+    var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+    var date = new Date();
+    var day = date.getDate();
+    var month = date.getMonth();
+    var thisDay = date.getDay(),
+    thisDay = myDays[thisDay];
+    var yy = date.getYear();
+    var year = (yy < 1000) ? yy + 1900 : yy;
+    document.write(thisDay + ', ' + day + ' ' + months[month] + ' ' + year);
+    
+    </script> </font> <br><br>
+    </h1>
+    </section>
+<script>
+window['CboxReady'] = function (Cbox) {
+	Cbox('button', '5-926881-EBelHL');
+}
+</script>
+<script src="https://static.cbox.ws/embed/1.js" async></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.33.1/sweetalert2.min.js"></script>
+
+	
+    <script type="text/javascript">
+    $(document).ready(function(){
+      //jquery for toggle sub menus
+      $('.sub-btn').click(function(){
+        $(this).next('.sub-menu').slideToggle();
+        $(this).find('.dropdown').toggleClass('rotate');
+      });
+
+      //jquery for expand and collapse the sidebar
+      $('.menu-btn').click(function(){
+        $('.side-bar').addClass('active');
+        $('.menu-btn').css("visibility", "hidden");
+      });
+
+      $('.close-btn').click(function(){
+        $('.side-bar').removeClass('active');
+        $('.menu-btn').css("visibility", "visible");
+      });
+    });
+    
+  function visitor(){
+              var xhr = new XMLHttpRequest()
+              var url = 'https://api.countapi.xyz/hit/janbot-api.herokuapp.com/visits'
+              xhr.onloadend = function(){
+             data = JSON.parse(this.responseText)
+  document.getElementById("visitor").textContent = data.value
+              }
+              xhr.open("GET", url, true)
+              xhr.send()
+  }
+  
+ 
+const Toast = Swal.mixin({
+  toast: true,
+  position: 'top-end',
+  showConfirmButton: false,
+  timer: 5000
+});
+ 
+Toast.fire({
+  type: 'success',
+  title: 'No Apikey, Jgan Spam Ya:) '
+})
+</script>
+      </div>
+  </body>
+</html>

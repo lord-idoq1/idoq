@@ -1,0 +1,949 @@
+<!doctype html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/bootstrap/css/bootstrap.min.css">
+    <link href="https://colorlib.com/polygon/concept/assets/vendor/fonts/circular-std/style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/libs/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css" class="sub-item">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/chartist-bundle/chartist.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/morris-bundle/morris.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/fonts/material-design-iconic-font/css/materialdesignicons.min.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/charts/c3charts/c3.css">
+    <link rel="stylesheet" href="https://colorlib.com/polygon/concept/assets/vendor/fonts/flag-icon-css/flag-icon.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.3.0/font/bootstrap-icons.css">
+    <link rel="stylesheet" href="css/style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+    <script type="text/javascript">
+    window.setTimeout("waktu()", 1000);
+    function waktu() {
+        var waktu = new Date();
+        setTimeout("waktu()", 1000);
+        document.getElementById("jam").innerHTML = waktu.getHours();
+        document.getElementById("menit").innerHTML = waktu.getMinutes();
+        document.getElementById("detik").innerHTML = waktu.getSeconds();
+    }
+    </script>
+    <title> YogiPw Api </title> 
+<meta property="og:image" content="https://i.ibb.co/wJv5Pgp/logolu.png" /> 
+<meta property="og:title" content="YogiPw APIs" /> <meta property="og:description" content="Ampun stah masih pemula"/> 
+<link rel="shortcut icon" href="https://i.ibb.co/wJv5Pgp/logolu.png" type="image/x-icon" />
+</head>
+
+<body>
+
+    <div class="dashboard-main-wrapper">
+
+        <div class="sidebar-brand-icon">
+                <img class="img-profile rounded-circle" src="https://i.ibb.co/hmJp3L6/20210612-150128.png" style="max-width: 105px">
+			  </div>
+				<a class="navbar-brand text-white" href="#">YOGIPW-API</a>
+             </div>
+
+
+        <div class="nav-left-sidebar sidebar-white">
+            <div class="menu-list">
+                <nav class="navbar navbar-expand-lg navbar-light">
+                    <h2 class="d-xl-none d-lg-none" style="color: Black">Menu</h2>
+                                        <div class="navbar-toggler" style="color: transparent; position: static; border: transparent; background-color: transparent;">
+										 <div class="menu-btn" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <div class="menu-btn__burger"></div>
+						</div>
+                    </div>
+                    <div class="collapse navbar-collapse" id="navbarNav">
+                        <ul class="navbar-nav flex-column">
+                            <li class="nav-divider">
+                                API FEATURES
+                            </li>
+                            <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#submenu-1" aria-controls="submenu-1"><i class="fas fa-download"></i>Social Media</a>
+                                <div id="submenu-1" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                                          <li class="nav-item">
+                 <a class="nav-link" href="/api/download/fb?url=https://www.facebook.com/watch/?v=1393572814172251" target="_blank">Facebook Downloader</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/download/ig?url=https://www.instagram.com/p/CNtpwxuH5NK/?igshid=g26k5coikzwr" target="_blank">Instagram Downloader</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/download/ytmp4?url=https://youtu.be/Nq5rzeJ5Ab4" target="_blank">Youtube Video Downloader</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/download/ytmp3?url=https://youtu.be/Nq5rzeJ5Ab4" target="_blank">Youtube Audio Downloader</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/yt/playmp4?query=naruto" target="_blank">Youtube Play Video</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/yt/playmp3?query=naruto" target="_blank">Youtube Play Audio</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/yt/search?query=naruto" target="_blank">Youtube Search</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/stalk/ig?username=yogi.prwaa._" target="_blank">Instagram Stalk</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/stalk/tiktok?username=chikakiku" target="_blank">Tiktok Stalk</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#music" aria-controls="music"><i class="fas fa-music"></i>Music API</a>
+                                <div id="music" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                                          <li class="nav-item">
+                 <a class="nav-link" href="/api/music/joox?query=monolog pamungkas" target="_blank">Joox Download</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/music/liriklagu?query=sayang" target="_blank">Search Lirik Lagu</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/music/chordlagu?lagu=sayang" target="_blank">Search Chord Lagu</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#search" aria-controls="search"><i class="fas fa-search"></i>Search API</a>
+                                <div id="search" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+              <li class="nav-item">
+                 <a class="nav-link" href="/api/search/image?query=naruto" class="sub-item">Google Image Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/search/pinterest?query=naruto" class="sub-item">Pinterest Image Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/search/gsmarena?query=poco x3" class="sub-item">GSMArena Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/search/shopee?query=air jordan" class="sub-item">Shopee Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/search/gplaystore?query=freefire&num=100" class="sub-item">Playstore Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/search/appstore?query=freefire&num=100&page=1" class="sub-item">Appstore Search</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#islam" aria-controls="islam"><i class="fas fa-star-and-crescent"></i>Islam API</a>
+                                <div id="islam" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/hadits?kitab=bukhari&nomor=52" target="_blank">Hadits Shahih</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/quran?surah=1&ayat=2" target="_blank">Al Qur'an</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/tahlil" target="_blank">Doa Tahlil</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/wirid" target="_blank">Doa Wirid</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/asmaulhusna" target="_blank">Asmaul Husna</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/doaharian" target="_blank">Doa Harian</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/ayatkursi" target="_blank">Ayat Kursi</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/kisahnabi?nabi=muhammad" target="_blank">Kisah Nabi</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/niatshalat" target="_blank">Niat Shalat</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/bacaanshalat" target="_blank">Bacaan Shalat</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/muslim/jadwalshalat?kota=jakartautara" target="_blank">Jadwal Shalat</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#wp" aria-controls="wp"><i class="fas fa-images"></i>Random API</a>
+                                <div id="wp" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/dadu" target="_blank">Random DADU</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/wallpaper/teknologi" target="_blank">Wallpaper Teknologi</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/wallpaper/programming" target="_blank">Wallpaper Programming</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/wallpaper/cyberspace" target="_blank">Wallpaper CyberSpace</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/wallpaper/muslim" target="_blank">Wallpaper Muslim</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/wallpaper/pegunungan" target="_blank">Wallpaper Mountain View</a>
+                                        </li>
+            <h6 class="collapse-header" target="_blank">Time Line API</h6>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/asupan" target="_blank">Random Asupan</a>
+                                        </li>
+                                        <li class="nav-item">
+                 <a class="nav-link" href="/api/random/quotes" target="_blank">Quotes</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/random/quotes/muslim" target="_blank">Quotes Islami</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/random/quotes/kanye" target="_blank">Quotes Kanye</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/random/asmaulhusna" target="_blank">Asmaul Husna</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/random/meme" target="_blank">Meme</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/random/wallpaper" target="_blank">Wallpaper</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#nsfw" aria-controls="nsfw"><i class="fas fa-images"></i>NSFW API</a>
+                                <div id="nsfw" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">                   
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/ass" target="_blank">Ass</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/ahegao" target="_blank">Ahegao</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/bdsm" target="_blank">Bdsm</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/blowjob" target="_blank">Blowjob</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/cuckold" target="_blank">Cuckold</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/cum" target="_blank">Cum</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/ero" target="_blank">Ero</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/femdom" target="_blank">Femdom</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/foot" target="_blank">Foot</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/gangbang" target="_blank">Gangbang</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/glasses" target="_blank">Glasses</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/hentai" target="_blank">Hentai</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/hentaigif" target="_blank">Hentaigif</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/jahy" target="_blank">Jahy</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/masturbation" target="_blank">Masturbate</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/nsfwNeko" target="_blank">NsfwNeko</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/orgy" target="_blank">Orgy</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/panties" target="_blank">Panties</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/pussy" target="_blank">Pussy</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/thighs" target="_blank">Anime Pussy</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/nsfw/yuri" target="_blank">Yuri</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/cersex" target="_blank">Cerita sex</a>
+                                        </li>
+                    <h6 class="collapse-header" target="_blank">SFW API</h6>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/waifu" target="_blank">Waifu</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/neko" target="_blank">Neko</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/shinobu" target="_blank">Shinobu</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/megumin" target="_blank">Megumin</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/bully" target="_blank">Bully</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/cuddle" target="_blank">Cuddle</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/cry" target="_blank">Cry</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/kiss" target="_blank">Kiss</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/hug" target="_blank">Hug</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/awoo" target="_blank">Awoo</a>
+                                        </li>
+                    <li class="nav-item">
+                 <a class="nav-link" href="/api/sfw/lick" target="_blank">Lick</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                 <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#cvs" aria-controls="cvs"><i class="fas fa-images"></i>Canvas API</a>
+                                <div id="cvs" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/welcome?name=YogiPw&mem=50&gcname=WIBOE GRUP&picurl=https://i.ibb.co/wJv5Pgp/logolu.png&bgurl=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Welcomer</a>
+                                        </li>
+          <li class="nav-item">
+                 <a class="nav-link" href="/api/welcome2?name=YogiPw&mem=50&gcname=WIBOE GRUP&picurl=https://i.ibb.co/wJv5Pgp/logolu.png&bgurl=https://i.ibb.co/wJv5Pgp/logolu.png&gcicon=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Welcomer 2</a>
+                                        </li>
+          <li class="nav-item">
+                 <a class="nav-link" href="/api/goodbye?name=YogiPw&mem=50&gcname=WIBOE GRUP&picurl=https://i.ibb.co/wJv5Pgp/logolu.png&bgurl=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Goodbye</a>
+                                        </li>
+          <li class="nav-item">
+                 <a class="nav-link" href="/api/goodbye2?name=YogiPw&mem=50&gcname=WIBOE GRUP&picurl=https://i.ibb.co/wJv5Pgp/logolu.png&bgurl=https://i.ibb.co/wJv5Pgp/logolu.png&gcicon=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Goodbye 2</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/gay?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Gay Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/gay2?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Gay Effect 2</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/komunis?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Komunis Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/hitler?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Hitler Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/discordblue?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Discord Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/discordblack?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Discord Effect 2</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/circle?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Circle Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/captcha?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Captcha Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/police?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Police Line Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/continued?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Continued Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/putin?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Putin Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/petimati?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">RIP Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/presentasi?text=anak kntl" target="_blank">Presentasi Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/penjara?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Jail Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/wasted?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Wasted Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/triger?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Triggered Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/greyscale?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">GreyScale Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/invert?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Invert Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/brightness?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Brightness Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/glass?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Glass Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/sepia?url=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Sepia Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/imgedit/enhance&img=https://i.ibb.co/wJv5Pgp/logolu.png" target="_blank">Bikin HD gambar</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#pt" aria-controls="pt"><i class="fas fa-images"></i>Photooxy API</a>
+                                <div id="pt" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/shadow?text=yogipw" target="_blank">Shadow Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/romantic?text=yogipw" target="_blank">Romantic Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/smoke?text=yogipw" target="_blank">Smoke text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/burn-paper?text=yogipw" target="_blank">Burn-paper Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/naruto?text=yogipw" target="_blank">Naruto Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/romantic?text=yogipw" target="_blank">Romantic Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/love-message?text=yogipw" target="_blank">Love-Message Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/message-under-grass?text=yogipw" target="_blank">Message Under Grass</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/glitch?text=yogipw?text2=Rest APIs" target="_blank">Glitch Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/double-heart?text=yogipw" target="_blank">Double Heart</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/coffe-cup?text=yogipw" target="_blank">Coffe-cup Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/love-text?text=yogipw" target="_blank">Love-Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/photooxy/butterfly?text=yogipw" target="_blank">Butterfly Text Effect</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#tp" aria-controls="tp"><i class="fas fa-images"></i>Textpro API</a>
+                                <div id="tp" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/techstyle?text=yogipw" target="_blank">TechStyle Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/techstyle2?text=yogipw" target="_blank">TechStyle2 Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/equalizer?text=yogipw" target="_blank">Equalizer text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/papercut?text=yogipw" target="_blank">PaperCut Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/gluetext?text=yogipw" target="_blank">Glue Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/captainamerika?text=yogipw" target="_blank">CAmerika Text Effect</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/textpro/blood?text=yogipw" target="_blank">Blood Text Effect</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#nm" aria-controls="nm"><i class="fas fa-cat"></i>Kartun & Animek API</a>
+                                <div id="nm" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/search?query=spongebob" target="_blank">Kartun Search</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/movie" target="_blank">Kartun Genre Movie</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/military" target="_blank">Kartun Genre Military</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/comedy" target="_blank">Kartun Genre Comedy</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/drama" target="_blank">Kartun Genre Drama</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/action" target="_blank">Kartun Genre Action</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kartun/genre/adventure" target="_blank">Kartun Genre Adventure</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/animek/kusonime?query=naruto" target="_blank">Kusonime</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/animek/dewabatch?query=naruto" target="_blank">Dewabatch</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#flm" aria-controls="flm"><i class="fas fa-film"></i>Film API</a>
+                                <div id="flm" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/film/lk21/search?query=avenger" target="_blank">Film Search (lk21)</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/film/api/filmapik/search?query=avenger" target="_blank">Film Search (filmapik)</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/film/lk21/newupload?page=1" target="_blank">Film Latest Movie (lk21)</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/film/api/filmapik/latest" target="_blank">Film Latest Movie (filmapik)</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/film/lk21/genre?query=action" target="_blank">Film Genre (lk21)</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/film/api/filmapik/category?query=action" target="_blank">Film Genre (filmapik)</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#fn" aria-controls="fn"><i class="fas fa-laugh-beam"></i>Fun API</a>
+                                <div id="fn" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/caklontong" target="_blank">Cak Lontong</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakgambar" target="_blank">Tebak Gambar</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/math" target="_blank">Soal Matematika</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakbendera" target="_blank">Tebak Bendera</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakjenaka" target="_blank">Tebak Jenaka</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakkimia" target="_blank">Tebak Kimia</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakchara" target="_blank">Tebak Animek</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebakbendera" target="_blank">Tebak Bendera</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/kuis/tebaklirik" target="_blank">Tebak Lirik Lagu</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fun/truth" target="_blank">Truth</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fun/dare" target="_blank">Dare</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fun/cerpen" target="_blank">Cerpen</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fun/pantun" target="_blank">Pantun</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fun/ramaljadian?tanggal=1&bulan=1&tahun=2001" target="_blank">Ramal Jadian</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/hilih?kata=aku kan ganteng banget" target="_blank">Kata Hilih</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/heleh?kata=aku kan ganteng banget" target="_blank">Kata Heleh</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/holoh?kata=aku kan ganteng banget" target="_blank">Kata Holoh</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/halah?kata=aku kan ganteng banget" target="_blank">Kata Halah</a>
+                                        </li>
+             <li class="nav-item">
+                 <a class="nav-link" href="/api/huluh?kata=aku kan ganteng banget" target="_blank">Kata Huluh</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#tol" aria-controls="tol"><i class="fas fa-wrench"></i>Tools API</a>
+                                <div id="tol" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/web2plain-text?url=https://yogipurwa-api.herokuapp.com" target="_blank">Web To Plain-Text</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/tools/wpuser?url=http://gdjms.co.za/" target="_blank">Wordpress User</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/short/tinyurl?url=google.com" target="_blank">Shortlink Tinyurl</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/short/isgd?url=google.com" target="_blank">Shortlink Isgd</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/short/cuttly?url=google.com" target="_blank">Shortlink Cuttly</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/translate?kata=hi" target="_blank">Translate</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/fakedata?country=en" target="_blank">Fake Data</a>
+                                        </li>
+         <h6 class="collapse-header" target="_blank">Encrypt Tools</h6>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/base?type=base64&encode=yogipwApis" target="_blank">Base64 Encrypt</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/base?type=base32&encode=yogipwApis" target="_blank">Base32 Encrypt</a>
+                                        </li>
+         <h6 class="collapse-header" target="_blank">Decrypt Tools</h6>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/base?type=base64&decode=yogipwApis" target="_blank">Base64 Decrypt</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/base?type=base32&decode=yogipwApis" target="_blank">Base32 Decrypt</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#in" aria-controls="in"><i class="fab fa-fw fa-wpforms"></i>Information API</a>
+                                <div id="in" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/info/gempa" target="_blank">Info Gempa</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/cuaca?kota=banyuwangi" target="_blank">Info Cuaca</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/covidindo" target="_blank">Covid Indo</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/covidworld" target="_blank">Covid World</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/wikipedia?search=jembatan" target="_blank">Wikipedia</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/drakorasia?search=tale" target="_blank">Drakor Asia</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/kbbi?kata=pohon" target="_blank">KBBI</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/info/kodepos?kota=jakarta" target="_blank">Kode Pos</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-item bg-white">
+                                <a class="nav-link active" href="#" data-toggle="collapse" aria-expanded="false" data-target="#ot" aria-controls="ot"><i class="fas fa-align-center"></i>Other API</a>
+                                <div id="ot" class="collapse submenu bg-white bg-white" style="">
+                                    <ul class="nav flex-column">
+                 <li class="nav-item">
+                 <a class="nav-link" href="/api/info/gempa" target="_blank">Info Gempa</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/nulis?text=Awokwokwok Mager yaa:v" target="_blank">Nulis Buku</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/styletext?text=ff.hengkerss.yogipewe" target="_blank">StyleText</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/attp?text=yogipw" target="_blank">Animation Text To Picture</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/ttp?text=yogipw" target="_blank">Text To Picture</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/ttp2?text=yogipw" target="_blank">Text To Picture 2</a>
+                                        </li>
+            <li class="nav-item">
+                 <a class="nav-link" href="/api/maker/emoji2png?text=😎" clas="sub-item">Emoji To Png</a>
+                                        </li>
+                                        </ul>
+                                            </div>
+                                        </li>  
+                                        <li class="nav-divider">
+Contact Me
+</li>
+                                                 <li class="nav-item">
+                                            <a class="nav-link collapsed" href="http://wa.me/6283152753417" >
+											 <i class="fab fa-fw fa-whatsapp" ></i>
+											 <span>Whatsapp</span>
+											 </a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </nav>
+            </div>
+        </div>
+		<br>
+        <div class="dashboard-wrapper">
+            <div class="dashboard-ecommerce">
+                <div class="container">
+                        <div class="row">
+						<div class="alert alert-primary">
+					<p>Halo lordd<br>Ampun Lord Gw Masih Pemula🗿</p>
+					</div>
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<div class="card border-3 border-top border-top-primary">
+<div class="button">
+<span class="bi bi-wifi fa-2x text-black"></span>
+<h2 class="mb-1" id="ipne">0.0.0.0</h2>
+<p class="mb-0 mt-3 text-muted">Alamat IP</p>
+<div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+</div>
+</div>
+</div>
+</div>
+
+
+
+
+
+
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<div class="card border-3 border-top border-top-primary">
+<div class="button">
+<span class="bi bi-arrow-up fa-2x text-black"></span>
+<h2 class="mb-1" id="totalhit">0</h2>
+<p class="mb-0 mt-3 text-muted">Total Visitor</p>
+<div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+</div>
+</div>
+</div>
+</div>
+
+<div class="col-xl-3 col-lg-3 col-md-6 col-sm-12 col-12">
+<div class="card border-3 border-top border-top-primary">
+<div class="button">
+<span class="bi bi-calendar-check-fill fa-2x text-black"></span>
+<br>
+<br>
+<div class="time">
+<span id="dayname">Day</span>,
+<span id="daynum">00</span>
+<span id="month">Month</span>
+<span id="year">Year</span>
+</div>
+<div class="time">
+        <p id="clock">00</p
+      </div>
+<div class="metric-label d-inline-block float-right text-danger font-weight-bold">
+</div>
+</div>
+</div>
+</div>
+</style>
+        </div>
+		<div class="card h-50 mb-4">
+                        <div class="card-body">
+                            <div class="row align-items-center">
+                                <div class="col mr-2">
+                                    <h1 class="text-md-left font-weight-bold mb-2 text-black"><center>INFORMASI</center></h1>
+                                    <p class="mb-4">
+                                    Halo kalian semua, perkenalkan nama saya Yogi Purwa alias Yogi, tujuan saya disini hanya untuk saya belajar membuat rest api, agar kalian juga bisa menikmati fitur api ini yang terutama dalam dunia perbotan hehehe.
+                                </p>
+                                <p class="mb-4">
+                                    Oh iya api ini saya buat gratis kok supaya kalian semua bisa pake sepuasnya sampai coid, berbagi itu indah yah wkwkwk, oke itu saja yang saya sampaikan mohon maaf bila api ini banyak yang error karena saya masih belajar. 
+                                </p>
+								<p class="mb-4">
+                                    Terima Kasih :)
+								</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+					</div>
+					<br>
+					<br>
+					<br>
+			<br>
+			<style>
+			.potbar {
+    position: fixed; 
+    bottom: 0;
+    left: 0px;
+    right: 0;
+    height: 50px;
+}
+
+			.handap {
+  bottom: 0px;
+  color: rgba(255, 255, 255, 0.73);
+  text-align: center;
+  padding: 12px 30px;
+  position: absolute;
+  right: 0;
+  left: 250px;
+  background-color: transparent;
+  -webkit-transition: all 0.3s ease;
+  -moz-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
+  transition: all 0.3s ease; 
+}
+.dekalah {
+    padding: .25rem 0.5rem;
+    font-size: 1.25rem;
+    line-height: 1;
+    background-color: transparent;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+}
+			</style>
+<script>
+const menuBtn = document.querySelector('.menu-btn');
+let menuOpen = false;
+menuBtn.addEventListener('click', () => {
+  if(!menuOpen) {
+    menuBtn.classList.add('open');
+    menuOpen = true;
+  } else {
+    menuBtn.classList.remove('open');
+    menuOpen = false;
+  }
+});
+</script>
+<script>
+ var xhr = new XMLHttpRequest();
+            var url = 'https://api.countapi.xyz/hit/api-yogipw.herokuapp.com';
+            xhr.onloadend = function(){
+           data = JSON.parse(this.responseText);
+document.getElementById("totalhit").textContent = data.value
+            };
+            xhr.open("GET", url, true);
+            xhr.send();
+</script>
+<script src="js/jharwo.js"></script>
+<script type="text/javascript">
+window.setTimeout("initClock()", 1000);
+    function updateClock(){
+      var now = new Date();
+      var dname = now.getDay(),
+          mo = now.getMonth(),
+          dnum = now.getDate(),
+          yr = now.getFullYear(),
+          hou = now.getHours(),
+          min = now.getMinutes(),
+          sec = now.getSeconds(),
+          pe = "AM";
+
+          if(hou >= 12){
+            pe = "PM";
+          }
+          if(hou == 0){
+            hou = 12;
+          }
+          if(hou > 12){
+            hou = hou - 12;
+          }
+
+          Number.prototype.pad = function(digits){
+            for(var n = this.toString(); n.length < digits; n = 0 + n);
+            return n;
+          }
+
+          var months = ["Januari", "Febuari", "Maret", "April", "Mei", "Juni", "Juli", "Agustus", "September", "Oktober", "November", "Desember"];
+          var week = ["Minggu", "Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu"];
+          var ids = ["dayname", "month", "daynum", "year", "hour", "minutes", "seconds", "period"];
+          var values = [week[dname], months[mo], dnum.pad(2), yr, hou.pad(2), min.pad(2), sec.pad(2), pe];
+          for(var i = 0; i < ids.length; i++)
+          document.getElementById(ids[i]).firstChild.nodeValue = values[i];
+    }
+
+    function initClock(){
+      updateClock();
+      window.setInterval("updateClock()", 1);
+    }
+    </script>    
+	<script>
+	setInterval(() => {
+      var jamna = new Date().toLocaleTimeString('en-US', { timeZone: "Asia/Jakarta" });
+      document.getElementById("clock").innerHTML = jamna.split(':')[0] < 10 ? '0' + jamna : jamna
+    }, 1000);  
+	</script>  
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/jquery/jquery-3.3.1.min.js"></script>
+    <!-- bootstap bundle js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/bootstrap/js/bootstrap.bundle.js"></script>
+    <!-- slimscroll js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/slimscroll/jquery.slimscroll.js"></script>
+    <!-- main js -->
+    <script src="https://colorlib.com/polygon/concept/assets/libs/js/main-js.js"></script>
+    <!-- chart chartist js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/chartist-bundle/chartist.min.js"></script>
+    <!-- sparkline js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/sparkline/jquery.sparkline.js"></script>
+    <!-- morris js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/morris-bundle/raphael.min.js"></script>
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/morris-bundle/morris.js"></script>
+    <!-- chart c3 js -->
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/c3charts/c3.min.js"></script>
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/c3charts/d3-5.4.0.min.js"></script>
+    <script src="https://colorlib.com/polygon/concept/assets/vendor/charts/c3charts/C3chartjs.js"></script>
+    <script src="https://colorlib.com/polygon/concept/assets/libs/js/dashboard-ecommerce.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.12.15/dist/sweetalert2.all.min.js"></script>
+    <style type="text/css">
+        .wrapper {
+  min-height: 100%;
+
+  /* Equal to height of footer */
+  /* But also accounting for potential margin-bottom of last child */
+  margin-bottom: -50px;
+}
+    </style>
+	</div>
+</body>
+ 
+</html>
