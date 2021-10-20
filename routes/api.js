@@ -144,8 +144,8 @@ var {
 } = require("./../lib/utils/yt");
 
 var {
-  igStalk,
-} = require("./../lib/utils/ig");
+  igstalk,
+} = require("./../lib/igstalk");
 
 var { 
   Joox, 
@@ -511,7 +511,7 @@ router.get('/tiktok', async (req, res, next) => {
   router.get('/stalk/ig', async(req, res, next) => {
   const username = req.query.username;
  
-  igStalk(username)
+  IGStalk(username)
     .then((result) => {
       res.json({
         status : true,
