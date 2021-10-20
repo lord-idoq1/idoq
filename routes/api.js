@@ -85,10 +85,6 @@ var {
 	Gempa
 } = require('./../lib');
 
-var { 
-  igStalk,
-} = require("./../lib/utils/ig");
-
 var {
 	RandomCerpen, 
 	emoji,
@@ -507,22 +503,22 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-  router.get("/stalk/instagram", async(req, res, next) => {
-    const username = req.query.username;
-    
-    
-    if(!username) return res.json(loghandler.notusername)
-    
-    
-    igStalk(username)
-        .then((data) => {
-            res.json(data);
-        })
-        .catch((error) => {
-            res.json(error);
-        });
-      
-});          	          	
+  router.get('/stalk/instagram', async (req, res, next) => {
+       fetch(encodeURI(`https://hardianto.xyz/api/igstalk?username=hardianto02_&apikey=hardianto`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 creator : `${creator}`,
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+
+})
+  	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
 		
