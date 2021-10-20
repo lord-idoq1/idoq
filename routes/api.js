@@ -504,26 +504,30 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
- 
-  router.get('/igstalk', async(req, res, next) => {
-  username = req.query.username
+ router.get('/igstalk', async (req, res, next) => {
+    
+        username = req.query.username
 
 	
-    if (!username) return res.json(loghandler.notusername)   
-        fetchUser(`${username}`)
-        .then((data) => {
-      res.json({
-      creator : `${creator}`,
-        status : true,
-        code: 200,
-        metaData
+    if (!username) return res.json(loghandler.notusername)
+    igstalk(username)
+        .then(user => {
+            res.json({
+                status : true,
+                creator : `${creator}`,
+                result : user
+            })
+        })
+        .catch(e => {
+             res.json({
+                 status : false,
+                 creator : `${creator}`,
+                 message : "error, mungkin username anda tidak valid"
              })
          })
-         .catch(e => {
-         	res.json(loghandler.error)
+   
 })
-})
-          	          	
+            	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
 		
