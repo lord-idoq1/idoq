@@ -511,12 +511,12 @@ router.get('/tiktok', async (req, res, next) => {
 	
     if (!username) return res.json(loghandler.notusername)   
         fetchUser(`${username}`)
-        .then((metaData) => {
+        .then((final) => {
       res.json({
       creator : `${creator}`,
         status : true,
         code: 200,
-        data
+        final
              })
          })
          .catch(e => {
