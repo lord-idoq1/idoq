@@ -511,7 +511,7 @@ router.get('/tiktok', async (req, res, next) => {
 	
     if (!username) return res.json(loghandler.notusername)   
         fetchUser(`${username}`)
-        .then((metaData) => {
+        .then((data) => {
       res.json({
       creator : `${creator}`,
         status : true,
