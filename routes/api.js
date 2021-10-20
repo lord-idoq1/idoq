@@ -511,11 +511,11 @@ router.get('/tiktok', async (req, res, next) => {
 	
     if (!username) return res.json(loghandler.notusername)
     igstalk(username)
-        .then(data => {
+        .then(result => {
             res.json({
                 status : true,
                 creator : `${creator}`,
-                result : data
+                result
             })
         })
         .catch(e => {
