@@ -32,7 +32,6 @@ var emoji = new EmojiAPI();
 var router  = express.Router();
 var { herolist, herodetail } = require('../lib/heroml')
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
-var { igstalk } = require('../lib/igstalk.js')
 var { igDownloader } = require('../lib/igdown.js')
 var { mediafireDl } = require('../lib/mediafire.js')
 var { rexdl, andro1 } = require('../lib/apk')
@@ -87,7 +86,7 @@ var {
 } = require('./../lib');
 
 var { 
-  igStalk'
+  igStalk,
 } = require("./../lib/utils/ig");
 
 var {
