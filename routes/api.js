@@ -86,6 +86,10 @@ var {
 	Gempa
 } = require('./../lib');
 
+var { 
+  igStalk'
+} = require("./../lib/utils/ig");
+
 var {
 	RandomCerpen, 
 	emoji,
@@ -504,30 +508,9 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
- router.get('/stalk/ig', async (req, res, next) => {
-    
-        username = req.query.username
+  
 
-	
-    if (!username) return res.json(loghandler.notusername)
-    igstalk(username)
-        .then(result => {
-            res.json({
-                status : true,
-                creator : `${creator}`,
-                result
-            })
-        })
-        .catch(e => {
-             res.json({
-                 status : false,
-                 creator : `${creator}`,
-                 message : "error, mungkin username anda tidak valid"
-             })
-         })
-   
-})
-            	          	
+           	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
 		
