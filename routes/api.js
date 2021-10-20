@@ -504,7 +504,7 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
- router.get('/igstalk', async (req, res, next) => {
+ router.get('/stalk/ig', async (req, res, next) => {
     
         username = req.query.username
 
