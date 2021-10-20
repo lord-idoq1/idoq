@@ -27,7 +27,7 @@ var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
-var { EmojiAPI } = require("emoji-api");
+var ig = require('insta-fetcher');
 var emoji = new EmojiAPI();
 var router  = express.Router();
 var { herolist, herodetail } = require('../lib/heroml')
@@ -142,10 +142,6 @@ var {
   ytPlayMp4,
   ytSearch
 } = require("./../lib/utils/yt");
-
-var {
-  igstalk,
-} = require("./../lib/igstalk");
 
 var { 
   Joox, 
@@ -507,23 +503,32 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
- 
-  router.get('/stalk/ig', async(req, res, next) => {
-  const username = req.query.username;
- 
-  IGStalk(username)
-    .then((result) => {
-      res.json({
-        status : true,
-        code: 200,
-        creator : `${creator}`,
-        result
-      });
-    })
-    .catch((err) => {
-      res.json(err);
-    });
- });  
+ router.get('/stalk/ig', async (req, res, next) => {
+    
+        username = req.query.username
+
+	
+    if (!username) return res.json(loghandler.notusername)
+
+
+    ig.fetchUser(username)
+        .then(user => {
+            res.json({
+                status : true,
+                creator : `${creator}`,
+                result : user
+            })
+        })
+        .catch(e => {
+             res.json({
+                 status : false,
+                 creator : `${creator}`,
+                 message : "error, mungkin username anda tidak valid"
+             })
+         })
+   
+})
+  
           	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
