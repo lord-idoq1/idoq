@@ -507,17 +507,18 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-  router.get("/ig/stalk", (req, res) => {
-    const username = req.query.u || req.query.username || req.query.user || req.query.q;
-    igStalk(username)
-        .then((data) => {
-            res.send(data);
-        })
-        .catch((err) => {
-            res.send(err);
-        });
-});
-
+  router.get('/ig/stalk', async(req, res, next) => {
+  const q = req.query.q;
+  
+  igStalk(username)
+    .then((data) => {
+      res.json({
+        status : true,
+        code: 200,
+        creator : `${creator}`,
+        data
+      });
+    });
            	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
