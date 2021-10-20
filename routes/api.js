@@ -508,7 +508,16 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-  
+  router.get("/ig/stalk", (req, res) => {
+    const username = req.query.u || req.query.username || req.query.user || req.query.q;
+    igStalk(username)
+        .then((data) => {
+            res.send(data);
+        })
+        .catch((err) => {
+            res.send(err);
+        });
+}); di
 
            	          	
 router.get('/mediafire', async (req, res, next) => {        
