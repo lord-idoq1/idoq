@@ -508,23 +508,16 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-  router.get('/stalk/ig', async (req, res, next) => {
-       username = req.query.username
-	
-    if (!username) return res.json(loghandler.notusername)
-      igStalk(username)
-        .then(user => {
-            res.json({
-                result : user
-            })
+  router.get("/ig/stalk", (req, res) => {
+    const username = req.query.u || req.query.username || req.query.user || req.query.q;
+    igStalk(username)
+        .then((data) => {
+            res.send(data);
         })
-        .catch(e => {
-             res.json({
-                 message : "error, mungkin username anda tidak valid"
-             })
-         })
-   
-})
+        .catch((err) => {
+            res.send(err);
+        });
+});
   	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
