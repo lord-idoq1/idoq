@@ -512,7 +512,7 @@ router.get('/tiktok', async (req, res, next) => {
     const username = req.query.u || req.query.username || req.query.user || req.query.q;
     igStalk(username)
         .then((data) => {
-            res.send(data);
+            res.send(result);
         })
         .catch((err) => {
             res.send(err);
