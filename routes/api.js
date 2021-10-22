@@ -27,7 +27,6 @@ var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
-var ig = require('instatouch');
 var { EmojiAPI } = require("emoji-api");
 var emoji = new EmojiAPI();
 var router  = express.Router();
@@ -502,18 +501,7 @@ router.get('/tiktok', async (req, res, next) => {
          .catch(e => {
          	res.json(loghandler.error)
 })
-})
-
-  router.get("/ig/stalk", (req, res) => {
-    const username = req.query.u || req.query.username || req.query.user || req.query.q;
-   ig.getUserMeta(username)
-        .then(data) => {
-            res.send(data);
-        })
-        .catch((err) => {
-            res.send(err);
-        });
-});
+}) 
   	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
