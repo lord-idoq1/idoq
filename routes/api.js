@@ -513,12 +513,9 @@ router.get('/tiktok', async (req, res, next) => {
 	
     if (!username) return res.json(loghandler.notusername)
       igStalk(username)
-    .then((data) => {
+    .then((result) => {
       res.json({
-        status : true,
-        code: 200,
-        creator : `${creator}`,
-        data
+        result
       });
     })
     .catch((err) => {
