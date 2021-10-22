@@ -33,7 +33,6 @@ var router  = express.Router();
 var { herolist, herodetail } = require('../lib/heroml')
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
 var { igDownloader } = require('../lib/igdown.js')
-var { igstalk } = require('../lib/scrapper.js')
 var { mediafireDl } = require('../lib/mediafire.js')
 var { rexdl, andro1 } = require('../lib/apk')
 var artimimpi = require('../lib/artimimpi')
@@ -143,6 +142,10 @@ var {
   ytPlayMp4,
   ytSearch
 } = require("./../lib/utils/yt");
+
+var {
+  igStalk,
+} = require("./../lib/utils/ig");
 
 var { 
   Joox, 
@@ -506,21 +509,21 @@ router.get('/tiktok', async (req, res, next) => {
 
   router.get('/stalk/instagram', async (req, res, next) => {
        username = req.query.username
-
 	
     if (!username) return res.json(loghandler.notusername)
-      igstalk(`${usename}`)
-        .then(data => {
-        var result = data.result;
-             res.json({
-             	author: 'Idoganz',
-                 result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
+      igStalk(username)
+    .then((result) => {
+      res.json({
+        status : true,
+        code: 200,
+        creator : `${creator}`,
+        result
+      });
+    })
+    .catch((err) => {
+      res.json(err);
+    });    
+});
   	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
