@@ -27,7 +27,6 @@ var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
-var su = require('su-api');
 var { EmojiAPI } = require("emoji-api");
 var emoji = new EmojiAPI();
 var router  = express.Router();
@@ -142,6 +141,23 @@ var {
   ytPlayMp3,
   ytPlayMp4,
   ytSearch
+} = require("./../lib/utils/yt");
+
+var {
+  tiktokDown,
+  igDownload,
+  igDownload2,
+  igStalk,
+  igStory,
+  twitterDown,
+  emojiScraper,
+  wikiPedia,
+  kusoNime,
+  otakuDesu,
+  otakuDesuOngoing,
+  webToons,
+  tebakGambar,
+  muiHalal
 } = require("./../lib/utils/yt");
 
 var { 
@@ -476,7 +492,7 @@ router.get('/yt/search', async(req, res, next) => {
 });
 router.get("/ig/stalk", (req, res) => {
     const username = req.query.u || req.query.username || req.query.user || req.query.q;
-    su.igStalk(username)
+    igStalk(username)
         .then((data) => {
             res.send(data);
         })
