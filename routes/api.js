@@ -507,8 +507,8 @@ router.get('/tiktok', async (req, res, next) => {
   router.get("/ig/stalk", (req, res) => {
     const username = req.query.u || req.query.username || req.query.user || req.query.q;
     ig.fetchUser(username)
-        .then((result) => {
-            res.send(result);
+        .then((final) => {
+            res.send(metaData);
         })
         .catch((err) => {
             res.send(err);
