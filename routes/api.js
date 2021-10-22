@@ -27,6 +27,7 @@ var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
+var dp = require('dp-api');
 var { EmojiAPI } = require("emoji-api");
 var emoji = new EmojiAPI();
 var router  = express.Router();
@@ -473,6 +474,17 @@ router.get('/yt/search', async(req, res, next) => {
         });
       
 });
+router.get("/ig/stalk", (req, res) => {
+    const username = req.query.u || req.query.username || req.query.user || req.query.q;
+    dp.igStalk(username)
+        .then((data) => {
+            res.send(data);
+        })
+        .catch((err) => {
+            res.send(err);
+        });
+});
+
 router.get('/download/fb', async (req, res, next) => {
     
         url = req.query.url
