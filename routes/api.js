@@ -513,15 +513,18 @@ router.get('/tiktok', async (req, res, next) => {
 	
     if (!username) return res.json(loghandler.notusername)
       igStalk(username)
-    .then((result) => {
-      res.json({
-        result
-      });
-    })
-    .catch((err) => {
-      res.json(err);
-    });    
-});
+        .then(user => {
+            res.json({
+                result : user
+            })
+        })
+        .catch(e => {
+             res.json({
+                 message : "error, mungkin username anda tidak valid"
+             })
+         })
+   
+})
   	          	
 router.get('/mediafire', async (req, res, next) => {        
             url = req.query.url
