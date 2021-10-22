@@ -145,6 +145,7 @@ var {
 
 var {
   igStalk,
+  igDownload
 } = require("./../lib/utils/ig");
 
 var { 
@@ -507,7 +508,7 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-  router.get('/stalk/instagram', async (req, res, next) => {
+  router.get('/stalk/ig', async (req, res, next) => {
        username = req.query.username
 	
     if (!username) return res.json(loghandler.notusername)
