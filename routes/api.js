@@ -27,6 +27,7 @@ var zrapi = require("zrapi");
 var dotenv = require("dotenv").config()
 var fs = require('fs');
 var TikTokScraper = require('tiktok-scraper');
+var ig = require('instatouch');
 var { EmojiAPI } = require("emoji-api");
 var emoji = new EmojiAPI();
 var router  = express.Router();
@@ -142,11 +143,6 @@ var {
   ytPlayMp4,
   ytSearch
 } = require("./../lib/utils/yt");
-
-var {
-  igStalk,
-  igDownload
-} = require("./../lib/utils/ig");
 
 var { 
   Joox, 
