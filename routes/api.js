@@ -158,7 +158,7 @@ var {
   webToons,
   tebakGambar,
   muiHalal
-} = require("./../lib/utils/yt");
+} = require("./../lib/utils/ig");
 
 var { 
   Joox, 
