@@ -143,23 +143,6 @@ var {
   ytSearch
 } = require("./../lib/utils/yt");
 
-var {
-  tiktokDown,
-  igDownload,
-  igDownload2,
-  igStalk,
-  igStory,
-  twitterDown,
-  emojiScraper,
-  wikiPedia,
-  kusoNime,
-  otakuDesu,
-  otakuDesuOngoing,
-  webToons,
-  tebakGambar,
-  muiHalal
-} = require("./../lib/utils/ig");
-
 var { 
   Joox, 
   FB, 
@@ -492,14 +475,18 @@ router.get('/yt/search', async(req, res, next) => {
 });
 router.get("/ig/stalk", (req, res) => {
     const username = req.query.u || req.query.username || req.query.user || req.query.q;
-    igStalk(username)
-        .then((data) => {
-            res.send(data);
-        })
-        .catch((eror) => {
-            res.send(eror);
-        });
-});
+    fetch(encodeURI(`https://hardianto-chan.herokuapp.com/api//igstalk?username=${username}&apikey=hardianto`))
+        .then(response => response.json())
+        .then(data => {
+        var result = data;
+             res.json({
+                 result
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 
 router.get('/download/fb', async (req, res, next) => {
     
