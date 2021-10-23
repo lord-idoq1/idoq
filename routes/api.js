@@ -496,8 +496,8 @@ router.get("/ig/stalk", (req, res) => {
         .then((data) => {
             res.send(data);
         })
-        .catch((reject) => {
-            res.send(reject);
+        .catch((eror) => {
+            res.send(eror);
         });
 });
 
