@@ -752,7 +752,6 @@ router.get('/igstalk', async(req, res, next) => {
                  result                              
              })
          })
-         .catch(e => {
          	catch(e => {
          	res.json(loghandler.error)
 })
