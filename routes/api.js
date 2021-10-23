@@ -517,6 +517,23 @@ fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/tiktokwithwm?u
          	res.json(loghandler.error)
 })
 })
+router.get('/igstalk', async(req, res, next) => {
+  const username = req.query.username;
+  
+  if(!username) return res.json(loghandler.notusername) 
+  igStalk(username)
+    .then(data => {
+        var result = data;
+             res.json({
+           status : true,
+                 creator : `${creator}`,    
+                 result                              
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 router.get('/socialmedia/ddtik', async (req, res, next) => {   
         url = req.query.url
 
