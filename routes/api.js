@@ -90,7 +90,6 @@ var {
 
 var {
   igStalk,
-  igstalk,
   igDownload,
   fbdown,
   twitterDown
@@ -759,24 +758,6 @@ router.get('/igstalk', async(req, res, next) => {
    } else {
 res.json(loghandler.invalidKey)
 }
-})
-
-router.get('/socialmedia/igstalk', async(req, res, next) => {
-    const username = req.query.username;
-
-  if(!username) return res.json(loghandler.notusername) 
-  igstalk(username)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                                                          
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
 })
 
 router.get('/socialmedia/twitter', async(req, res, next) => {
