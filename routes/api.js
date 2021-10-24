@@ -38,6 +38,10 @@ var {
 } = require('./../lib');
 
 var {
+	fbdown,
+} = require('./../lib/hexa.js');
+
+var {
 	RandomCerpen, 
 	emoji,
 	stickerSearch, 
@@ -740,7 +744,11 @@ router.get('/download/ig', async(req, res, next) => {
 })
 
 router.get('/igstalk', async(req, res, next) => {
-  const username = req.query.username;
+  const apikey = req.query.apikey;
+    
+    if(!apikey) return res.json(loghandler.notparam)
+    if(listkey.includes(apikey)){
+const username = req.query.username;
   
   if(!username) return res.json(loghandler.notusername) 
   igStalk(username)
@@ -773,6 +781,9 @@ router.get('/socialmedia/twitter', async(req, res, next) => {
          .catch(e => {
          	res.json(loghandler.error)
 })
+} else {
+  res.sendFile(__path + '/views/apikey-not-found.html');
+}
 })
 
 router.get('/stalk/tiktok', async (req, res, next) => {
