@@ -771,8 +771,7 @@ router.get('/socialmedia/igstalk', async(req, res, next) => {
              res.json({
            status : true,
                  creator : `${creator}`,    
-                 result                              
-                 result                              
+                 result                                                          
              })
          })
          .catch(e => {
