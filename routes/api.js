@@ -437,7 +437,7 @@ router.get('/download/fb', async (req, res, next) => {
 url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-FB(url)
+fbdown(url)
     .then(data => {
         var result = data;
              res.json({
