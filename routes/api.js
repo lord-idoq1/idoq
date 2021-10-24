@@ -38,10 +38,6 @@ var {
 } = require('./../lib');
 
 var {
-	fbdown
-} = require('./../lib/hexa.js');
-
-var {
 	RandomCerpen, 
 	emoji,
 	stickerSearch, 
@@ -441,7 +437,7 @@ router.get('/download/fb', async (req, res, next) => {
 url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fbdown(url)
+FB(url)
     .then(data => {
         var result = data;
              res.json({
@@ -745,11 +741,10 @@ router.get('/download/ig', async(req, res, next) => {
 
 router.get('/igstalk', async(req, res, next) => {
   const apikey = req.query.apikey;
-    
+    const username = req.query.username;
+
     if(!apikey) return res.json(loghandler.notparam)
     if(listkey.includes(apikey)){
-const username = req.query.username;
-  
   if(!username) return res.json(loghandler.notusername) 
   igStalk(username)
     .then(data => {
@@ -759,11 +754,7 @@ const username = req.query.username;
                  creator : `${creator}`,    
                  result                              
              })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-         })
+         })       
    } else {
 res.json(loghandler.invalidKey)
 }
