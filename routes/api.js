@@ -38,7 +38,7 @@ var {
 } = require('./../lib');
 
 var {
-	fbdown,
+	fbdown
 } = require('./../lib/hexa.js');
 
 var {
@@ -763,6 +763,10 @@ const username = req.query.username;
          .catch(e => {
          	res.json(loghandler.error)
 })
+         })
+   } else {
+res.json(loghandler.invalidKey)
+}
 })
 
 router.get('/socialmedia/twitter', async(req, res, next) => {
@@ -781,9 +785,6 @@ router.get('/socialmedia/twitter', async(req, res, next) => {
          .catch(e => {
          	res.json(loghandler.error)
 })
-} else {
-  res.sendFile(__path + '/views/apikey-not-found.html');
-}
 })
 
 router.get('/stalk/tiktok', async (req, res, next) => {
