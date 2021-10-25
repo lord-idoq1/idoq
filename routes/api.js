@@ -452,43 +452,6 @@ FB(url)
 })
 })
 
-router.get('/socialmedia/snapsavee', async (req, res, next) => {    
-        url = req.query.url
-
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/snapsave?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-              status : true,
-                 creator : `${creator}`,   
-                 result                   
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/tiktokdl', async (req, res, next) => {    
-        url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/tiktokdownloader?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({ 
-             status : true,
-                 creator : `${creator}`,    
-                 result                 
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
 router.get('/tiktok', async (req, res, next) => {        
             url = req.query.url
 	
@@ -506,62 +469,6 @@ router.get('/tiktok', async (req, res, next) => {
 })
 })
 
-router.get('/socialmedia/tiktoknowm', async (req, res, next) => {    
-        url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/tiktoknowm?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-            status : true,
-                 creator : `${creator}`,  
-                 result     
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/tiktokwm', async (req, res, next) => {    
-        url = req.query.url
-
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/tiktokwithwm?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({       
-        status : true,
-                 creator : `${creator}`, 
-                 result                     
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/ddtik', async (req, res, next) => {   
-        url = req.query.url
-
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/dddtik?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({
-          status : true,
-                 creator : `${creator}`,
-                 result                                 
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
 router.get('/instagram', async (req, res, next) => {        
             url = req.query.url
 
@@ -591,60 +498,6 @@ fetch(encodeURI(`https://hardianto-chan.herokuapp.com/api//igstalk?username=${us
              status : true,
                  creator : `${creator}`,
                  result
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/ttmate', async (req, res, next) => {    
-        url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/tikmate?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({  
-         status : true,
-                 creator : `${creator}`,  
-                 result                  
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/ttsave', async (req, res, next) => {   
-        url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/ttsave?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({ 
-           status : true,
-                 creator : `${creator}`,   
-                 result                          
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
-router.get('/socialmedia/snaptik', async (req, res, next) => {    
-        url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://dapuhy-api.herokuapp.com/api/socialmedia/nguteksnaptik?url=${url}&apikey=ojan`))
-        .then(response => response.json())
-        .then(data => {
-        var result = data;
-             res.json({             
-             status : true,
-                 creator : `${creator}`,
-                 result      
              })
          })
          .catch(e => {
