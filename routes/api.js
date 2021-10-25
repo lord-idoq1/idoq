@@ -411,6 +411,23 @@ router.get("/yt/playmp4", async(req, res, next) => {
       
 });
 
+router.get('/download/fb', async (req, res, next) => {
+url = req.query.url
+	
+     if (!url) return res.json(loghandler.noturl)
+fbDownloader(url)
+    .then(data => {
+        var result = data;
+             res.json({
+           status : true,
+                 creator : `${creator}`,    
+                 result                              
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
+})
 
 router.get('/yt/search', async(req, res, next) => {
     const query = req.query.query;
