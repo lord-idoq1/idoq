@@ -109,10 +109,6 @@ var {
   Tiktok
 } = require("./../lib/utils/downloader");
 
-var { 
-  igDownloader
-} = require("./../lib/igdown.js");
-
 var {
   Cuaca, 
   Lirik
@@ -471,25 +467,6 @@ router.get('/tiktok', async (req, res, next) => {
          	res.json(loghandler.error)
 })
 })
-
-router.get('/instagram', async (req, res, next) => {        
-            url = req.query.url
-
-if(!url) return res.json(loghandler.noturl) 
-  igDownloader(url)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                              
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
- 
        
 router.get('/ig/stalk', async (req, res, next) => {   
         username = req.query.username
