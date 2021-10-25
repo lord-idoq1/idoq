@@ -415,7 +415,7 @@ router.get('/download/fb', async (req, res, next) => {
 url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fbDownloader(url)
+FB(url)
     .then(data => {
         var result = data;
              res.json({
@@ -450,23 +450,6 @@ router.get('/yt/search', async(req, res, next) => {
         });
       
 });
-router.get('/download/fb', async (req, res, next) => {
-url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-FB(url)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                              
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
 
 router.get('/tiktok', async (req, res, next) => {        
             url = req.query.url
