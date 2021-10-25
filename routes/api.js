@@ -434,23 +434,6 @@ router.get('/yt/search', async(req, res, next) => {
         });
       
 });
-router.get('/download/fb', async (req, res, next) => {
-url = req.query.url
-	
-     if (!url) return res.json(loghandler.noturl)
-FB(url)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                              
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
-})
 
 router.get('/fb/download', async (req, res, next) => {
 if (!req.query.url) return res.send({ status: 500, msg : 'Masukkan Parameter url'})
