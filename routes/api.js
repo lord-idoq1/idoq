@@ -58,7 +58,6 @@ var {
 	cnn,
 	uploadFile,
 	ytPlay,
-	igDownloader,
 	ssstik_io,
 	photoManipulation,
 	ToVid,
@@ -109,6 +108,10 @@ var {
   FB, 
   Tiktok
 } = require("./../lib/utils/downloader");
+
+var { 
+  igDownloader
+} = require("./../lib/igdown.js");
 
 var {
   Cuaca, 
@@ -472,22 +475,24 @@ router.get('/tiktok', async (req, res, next) => {
 router.get('/instagram', async (req, res, next) => {        
             url = req.query.url
 
- if (!url) return res.json({ status : false, creator : `${creator}`, message : "masukan parameter url"})
-       igDownloader(`${url}`)
-        .then(data => {
+if(!url) return res.json(loghandler.noturl) 
+  igDownloader(url)
+    .then(data => {
         var result = data;
              res.json({
-             	author: 'Idoganz',
-                 result
+           status : true,
+                 creator : `${creator}`,    
+                 result                              
              })
          })
          .catch(e => {
          	res.json(loghandler.error)
 })
 })
+ 
+       
 router.get('/ig/stalk', async (req, res, next) => {   
         username = req.query.username
-
 	
      if (!username) return res.json(loghandler.notusername)
 fetch(encodeURI(`https://hardianto-chan.herokuapp.com/api//igstalk?username=${username}&apikey=hardianto`))
@@ -507,7 +512,6 @@ fetch(encodeURI(`https://hardianto-chan.herokuapp.com/api//igstalk?username=${us
 
 router.get('/download/tiktok', async (req, res, next) => {   
         url = req.query.url
-
 	
      if (!url) return res.json(loghandler.noturl)
      TiktokDownloader(url)
@@ -517,7 +521,6 @@ router.get('/download/tiktok', async (req, res, next) => {
      })
     
 })
-
 
 router.get('/download/ig', async(req, res, next) => {
   const url = req.query.url;
@@ -576,14 +579,10 @@ router.get('/socialmedia/twitter', async(req, res, next) => {
 })
 })
 
-router.get('/stalk/tiktok', async (req, res, next) => {
-    
+router.get('/stalk/tiktok', async (req, res, next) => {   
         username = req.query.username
-
 	
     if (!username) return res.json(loghandler.notusername)
-
-
     TikTokScraper.getUserProfileInfo(username)
         .then(user => {
             res.json({
