@@ -540,27 +540,6 @@ router.get('/download/ig', async(req, res, next) => {
 })
 })
 
-router.get('/igstalk', async(req, res, next) => {
-  const apikey = req.query.apikey;
-    const username = req.query.username;
-
-    if(!apikey) return res.json(loghandler.notparam)
-    if(listkey.includes(apikey)){
-  if(!username) return res.json(loghandler.notusername) 
-  igStalk(username)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                              
-             })
-         })       
-   } else {
-res.json(loghandler.invalidKey)
-}
-})
-
 router.get('/socialmedia/twitter', async(req, res, next) => {
   const url = req.query.url;
   
