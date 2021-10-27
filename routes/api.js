@@ -265,7 +265,7 @@ router.get('/music/joox', async(req, res, next) => {
   
    if(!apikey) return res.json(loghandler.notparam)
   if(!query) return res.json(loghandler.notquery)
-  
+  if(listkey.includes(apikey)){
   Joox(query)
   .then((result) => {
   res.json(result)
