@@ -456,7 +456,7 @@ router.get('/socialmedia/snapsavee', async (req, res, next) => {
 
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/snapsave?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/snapsave?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -474,7 +474,7 @@ router.get('/socialmedia/tiktokdl', async (req, res, next) => {
         url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/tiktokdownloader?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/tiktokdownloader?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -510,7 +510,7 @@ router.get('/socialmedia/ddtik', async (req, res, next) => {
 
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/dddtik?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/dddtik?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -547,7 +547,7 @@ router.get('/socialmedia/ttmate', async (req, res, next) => {
         url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/tikmate?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/tikmate?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -565,7 +565,7 @@ router.get('/socialmedia/ttsave', async (req, res, next) => {
         url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/ttsave?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/ttsave?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -583,7 +583,7 @@ router.get('/socialmedia/snaptik', async (req, res, next) => {
         url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/nguteksnaptik?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/nguteksnaptik?url=${url}&apikey=i`))
         .then(response => response.json())
         .then(data => {
         var result = data;
@@ -602,7 +602,7 @@ router.get('/socialmedia/mediafire', async (req, res, next) => {
         url = req.query.url
 	
      if (!url) return res.json(loghandler.noturl)
-fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/mediafire?url=${url}&apikey=ojan`))
+fetch(encodeURI(`https://api.dapuhy.ga/api/socialmedia/mediafire?url=${url}&apikey=i`))
 then(response => response.json())
         .then(data => {
         var result = data;
