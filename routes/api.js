@@ -668,7 +668,7 @@ router.get('/igdl', async(req, res) => {
       router.get('/igstalkk', async(req, res) => {
 	     let username = req.query.username
 	     if (!username) return res.json(loghandler.username)
-	     let result = await hxz.igstalk(username)
+	     let result = await hxz.igdl(username)
 	     try {
 	     res.json({
 			  status: 200,
