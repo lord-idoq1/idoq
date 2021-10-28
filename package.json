@@ -39,6 +39,7 @@
     "swiftcord": "^2.1.7",
     "nhentaidownloader": "^1.1.5", 
     "fbdl-core": "^1.0.2",
+    "hxz-api": "^1.0.1",
     "form-data": "^4.0.0",
     "fs": "0.0.1-security",
     "genius-lyrics": "^4.2.7",
