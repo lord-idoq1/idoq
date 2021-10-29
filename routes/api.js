@@ -26,9 +26,9 @@ var { EmojiAPI } = require("emoji-api");
 var emoji = new EmojiAPI();
 var router  = express.Router();
 var { herolist, herodetail } = require('../lib/heroml')
-var artimimpi = require('../lib/artimimpi')
+var artimimpi, dddtik = require('../lib/artimimpi')
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
-var { artinama, dddTik } = require('../lib/artinama')
+var artinama = require('../lib/artinama')
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js');
 var options = require(__path + '/lib/options.js');
@@ -704,22 +704,13 @@ router.get('/tiktok2', async(req, res, next) => {
 })
 })
 
-router.get('/dddtik', async(req, res, next) => {
-  const url = req.query.url;
-  
-  if(!url) return res.json(loghandler.noturl) 
-  dddTik(url)
-    .then(data => {
-        var result = data;
-             res.json({
-           status : true,
-                 creator : `${creator}`,    
-                 result                              
-             })
-         })
-         .catch(e => {
-         	res.json(loghandler.error)
-})
+router.get('/dddtik', async (req, res, next) => {
+const url = req.query.url
+if (!url) return res.json({ status: 404, error: 'masukkan param url'})
+        dddtik(url)
+        .then((tod) => {
+          res.json(tod)
+        });
 })
 
 router.get('/socialmedia/twitter', async(req, res, next) => {
