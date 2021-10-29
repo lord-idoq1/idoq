@@ -29,7 +29,6 @@ var { herolist, herodetail } = require('../lib/heroml')
 var artimimpi = require('../lib/artimimpi')
 var { TiktokDownloader } = require('../lib/tiktokdl.js')
 var artinama = require('../lib/artinama')
-var ddtik = require ('../lib/dddtik')
 var { color, bgcolor } = require(__path + '/lib/color.js');
 var { fetchJson } = require(__path + '/lib/fetcher.js');
 var options = require(__path + '/lib/options.js');
@@ -96,6 +95,10 @@ var {
   fbdown,
   twitterDown
 } = require("./../lib/utils/ig");
+
+var {
+  dddTik
+} = require("./../lib/dddtik");
 
 var {
   ytDonlodMp3,
@@ -705,13 +708,22 @@ router.get('/tiktok2', async(req, res, next) => {
 })
 })
 
-router.get('/dddtik', async (req, res, next) => {
-const url = req.query.url
-if (!url) return res.json({ status: 404, error: 'masukkan param url'})
-        dddtik(url)
-        .then((tod) => {
-          res.json(tod)
-        });
+router.get('/ddtik', async(req, res, next) => {
+  const url = req.query.url;
+  
+  if(!url) return res.json(loghandler.noturl) 
+  dddTik(url)
+    .then(data => {
+        var result = data;
+             res.json({
+           status : true,
+                 creator : `${creator}`,    
+                 result                              
+             })
+         })
+         .catch(e => {
+         	res.json(loghandler.error)
+})
 })
 
 router.get('/socialmedia/twitter', async(req, res, next) => {
